@@ -103,7 +103,23 @@ Lastly, I performed a sensitivity analysis on the system by changing the paramet
 
 Figure 8 show how the system changes by 1% change in each parameter. As it can be seen, there is not much visibile difference and the the plot was zoomed in in the appropriate area. Figure 9 shows the zoomed in plot showing the sensitivity of each parameter at 1%.
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/5d5c173c-6fe9-465f-a8e6-6bb480717328" width="500">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3db3f3df-04eb-4503-9dbe-091f933397dc" width="500">
+</div>
+
+**Figure 8. 1% Sensitivity Analysis on the Parameters in both directions**
+
 ######################### Figure 8 Here, 1% change
+
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7926d266-d63d-4c6b-9462-24329b08a04e" width="500">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7a4ec444-48b9-492d-8308-ab1783020181" width="500">
+</div>
+
+**Figure 9. 1% Sensitivity Analysis zoom to show where the most deviation occurs**
+
 ######################### Figure 9 Here, zoomed in 1% change.
 
 
@@ -111,11 +127,25 @@ Figure 8 show how the system changes by 1% change in each parameter. As it can b
 
 Similarly, 5% change in the parameter values were plotted to see which one is the most sensitive. This is shown in Figure 10
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/2a6271b8-4c08-4dc7-a761-f0cb02904d05" width="500">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/c6988e33-2646-455a-bc10-6abe40ecd826" width="500">
+</div>
+
+**Figure 10. 5% Sensitivity Analysis on the Parameters in both directions**
+
 ######################### Figure 10 Here, 5% change
 
 ### 10% Sensitivity
 
-Lastly, 10% change in the parameter values were plotted as shown in Figure 11.
+Lastly, 10% change in the parameter values in both directions were plotted as shown in Figure 11.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/bebe398b-b579-474e-a087-ff77bd0ebc87" width="500">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f5b6ebd7-a0d0-4fd3-b88e-5fb4238656ff" width="500">
+</div>
+
+**Figure 11. 10% Selectivity Analysis on the Parameters. Percent changes in both direction**
 
 ######################### Figure 11. 10% change.
 
