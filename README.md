@@ -62,5 +62,33 @@ After determining steady state, I decided to do a bifurcation analysis on the sy
 
 ## Sensitivity Analysis on the System
 
-Lastly, I performed a sensitivity analysis on the system by changing the parameters values by **1%**, **5%**, and **10%**.
+Lastly, I performed a sensitivity analysis on the system by changing the parameters values by **1%**, **5%**, and **10%**. I changed the parameters in both directions, by negative percentage and positive percentage. The plots' legends show the appropriate direction change the parameters. 
+
+
+### 1% Sensitivity.
+
+Figure 8 show how the system changes by 1% change in each parameter. As it can be seen, there is not much visibile difference and the the plot was zoomed in in the appropriate area. Figure 9 shows the zoomed in plot showing the sensitivity of each parameter at 1%.
+
+######################### Figure 8 Here, 1% change
+######################### Figure 9 Here, zoomed in 1% change.
+
+
+### 5% Sensitivity
+
+Similarly, 5% change in the parameter values were plotted to see which one is the most sensitive. This is shown in Figure 10
+
+######################### Figure 10 Here, 5% change
+
+### 10% Sensitivity
+
+Lastly, 10% change in the parameter values were plotted as shown in Figure 11.
+
+######################### Figure 11. 10% change.
+
+
+As it can be seen from the plots, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plot that $K_s$ is least sensitive since even changing it 10% did not affect the system at all. Therefore, it can be concluded that $K_s$ is not an important parameter and could be disregarded in some cases.
+
+
+
+
 
