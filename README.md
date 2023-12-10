@@ -19,7 +19,43 @@ Because of the high demand of  ethanol in fuel and other uses, there are various
 
 Again, in this S is the substrate concentration, X is the cell concentration, and P is the product ethanol concentration. $\hat{\mu}$ is considered the Maximum specific growth rate in the absence of inhibitory effects parameter, $K_S$ is the saturation constant, $K_i$ is the inhibition parameter of sugars, $P_{max}$ is the inhibition parameter for product ethanol, and $n$ is ethanol toxic power. These parameters significantly affect this system of coupled ordinary differential equations.
 
-**The paper had the following values for the parameters: $\hat{\mu}$ = 0.5, $K_S$ = 6.1 $\cdot$ 10 $^-3$, $K_i$ = 139.7, $P_{max}$ = 94.2, and $n$ = 4.12**
+**The paper had the following values for the parameters:**
+
+
+<table align="center" border="1">
+  <tr>
+    <th>Notation</th>
+    <th>Unit</th>
+    <th>Estimated Value</th>
+  </tr>
+  <tr>
+    <td>$\hat{\mu}$</td>
+    <td>$h^{-1}$</td>
+    <td>0.5</td>
+  </tr>
+  <tr>
+    <td>$K_s$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>$6.1\cdot 10^{-3}$</td>
+  </tr>
+  <tr>
+    <td>$K_i$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>139.7</td>
+  </tr>
+  <tr>
+    <td>$P_{max}$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>94.2</td>
+  </tr>
+  <tr>
+    <td>$n$</td>
+    <td>-</td>
+    <td>4.12</td>
+  </tr>
+</table>
+
+
 
 
 Morover, some parameters were calculated beforehand and compared to other literature, for example: $\alpha$ = 4.87 g/g. Similarly, $Y_{P/S}$ = 0.4 g/g. My analysis used the same value for these prior calculated parameters and only focused on the 5 parameters mentioned in table 1.
@@ -58,8 +94,40 @@ After setting the bounds, I was able to determine to the minimized function whic
 
 As figure 4 shows, the fit is not the most perfect fit. However, it is much better than the fit the paper had, improving the parameters to a much higher degree. The reason for that might be that the paper only performed nonlinear regression on these values to determine the parameters. Therefore, using the numerical methods of odeint and the minimize function led to much better results.
 
-After minimizing, these were the following parameters: $\hat{\mu}$ = 0.4943, $K_S$ = 0.8934, $K_i$ = 128.348, $P_{max}$ = 98.564, and $n$ = 4.89.
+**After minimizing, these were the following parameters:**
 
+<table align="center" border="1">
+  <tr>
+    <th>Notation</th>
+    <th>Unit</th>
+    <th>Estimated Value</th>
+  </tr>
+  <tr>
+    <td>$\hat{\mu}$</td>
+    <td>$h^{-1}$</td>
+    <td>0.4943</td>
+  </tr>
+  <tr>
+    <td>$K_s$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>$0.8934$</td>
+  </tr>
+  <tr>
+    <td>$K_i$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>128.348</td>
+  </tr>
+  <tr>
+    <td>$P_{max}$</td>
+    <td>$\frac{g}{L}$</td>
+    <td>98.564</td>
+  </tr>
+  <tr>
+    <td>$n$</td>
+    <td>-</td>
+    <td>4.89</td>
+  </tr>
+</table>
 
 ## Flow on a Line and Bifurcation Analysis
 
