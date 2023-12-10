@@ -89,6 +89,6 @@ Lastly, 10% change in the parameter values were plotted as shown in Figure 11.
 As it can be seen from the plots, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plot that $K_s$ is least sensitive since even changing it 10% did not affect the system at all. Therefore, it can be concluded that $K_s$ is not an important parameter and could be disregarded in some cases.
 
 
-
+Overall, the analysis looked at a set of coupled ordinary differential which were a kinetic model for production of ethanol in a biomass batch reactor with substrate and cell present. We first plotted the data using the parameters estimated by the paper. Then we minimized the parameters and fitted the experimental data, producing better parameters. Then we did a bifurcation analysis to determine how the steady state changes with change in a parameter. Lastly, we did sensitivity analysis to determine which parameter change affect the system the most. The result showed that the parameters $P_{max}$ and $n$ were the most sensitive parameter and must be studied more. On the other hand parameter $K_s$ had the least effect on the system and thus the system is not sensitive to change in $K_s$ parameter.
 
 
