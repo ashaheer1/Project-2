@@ -10,7 +10,11 @@ J. Bioprocess. Biotech, 6(266), 2. DOI: 10.4172/2155-9821.1000266
 
 Because of the high demand of  ethanol in fuel and other uses, there are various processes that are being studied. The aim of these studies is to determine the ideal and optimal conditions for the reactor to be in to produce the most ethanol. Therefore, this paper studies the production of ethanol by the use of a bioreactor containing bacteria cells and substrate. Essentially, in this paper, a mathematical model was used to determine and interpret experimental data from a batch alcohol fermentation process. Moreover in this paper substrate limitations and product inhibition were taken into account when determining the cell concentration and product concentration. Essentially, the substrate (S) is used by the cells (X) to produce the product (E). The paper proposes a kinetic model with a set of coupled ordinary differential equations. These ordinary differential equations have a whole set of parameters which affect the ODEs. Figure 1 shows the set of ordinary differential equations and the parameters that these equations depend on.
 
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f44ee7e2-efb7-4878-a066-02d381605db7" width="400">
+</div>
 
+**Figure 1. Set of Coupled Ordinary Differential Equations studied in the paper**
 ########################### Figure 1 Here
 
 Again, in this S is the substrate concentration, X is the cell concentration, and P is the product ethanol concentration. $\hat{\mu}$ is considered the Maximum specific growth rate in the absence of inhibitory effects parameter, $K_S$ is the saturation constant, $K_i$ is the inhibition parameter of sugars, $P_{max}$ is the inhibition parameter for product ethanol, and $n$ is ethanol toxic power. These parameters significantly affect this system of coupled ordinary differential equations.
@@ -22,10 +26,20 @@ Morover, some parameters were calculated beforehand and compared to other litera
 
 First, I decided to replicate the plot using the parameters provided in the paper. I was able to properly and accurately able to replicate using the plot shown in the paper. Figure 2 shows the concentration of Substrate, Cell and Product as the time change.
 
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3f1442e4-f48d-444d-a22f-7a34485a0df9" width="400">
+</div>
+
+**Figure 2. Plot of Substrate, Cell and Product Concentration. Added is the experimental Data**
 ########################### Figure 2 Here, Plot of All 3.
 
 However, for my analysis, I decided to focus on product production since the point of attention in this paper is the production of ethanol the product. Therefore, Figure 3 shows only the plot of product with experimental data from the parameters provided in the paper.
 
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7f7499ff-5660-40d6-b24f-bb2f7d859d3a" width="400">
+</div>
+
+**Figure 3. Plot of Product Concentration along with experimental Data**
 ########################### Figure 3 Here, Plot of only Product.
 
 
