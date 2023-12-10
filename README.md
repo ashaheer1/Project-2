@@ -15,9 +15,7 @@ Because of the high demand of  ethanol in fuel and other uses, there are various
 
 Again, in this S is the substrate concentration, X is the cell concentration, and P is the product ethanol concentration. $\hat{\mu}$ is considered the Maximum specific growth rate in the absence of inhibitory effects parameter, $K_S$ is the saturation constant, $K_i$ is the inhibition parameter of sugars, $P_{max}$ is the inhibition parameter for product ethanol, and $n$ is ethanol toxic power. These parameters significantly affect this system of coupled ordinary differential equations.
 
-The paper had the following values for the parameters
-
-############################ Table of Parameters Here.
+**The paper had the following values for the parameters: $\hat{\mu}$ = 0.5, $K_S$ = 6.1 $\cdot$ 10 $^-3$, $K_i$ = 139.7, $P_{max}$ = 94.2, and $n$ = 4.12**
 
 
 Morover, some parameters were calculated beforehand and compared to other literature, for example: $\alpha$ = 4.87 g/g. Similarly, $Y_{P/S}$ = 0.4 g/g. My analysis used the same value for these prior calculated parameters and only focused on the 5 parameters mentioned in table 1.
