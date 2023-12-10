@@ -17,3 +17,16 @@ Again, in this S is the substrate concentration, X is the cell concentration, an
 
 The paper had the following values for the parameters
 
+############################ Table of Parameters Here.
+
+
+Morover, some parameters were calculated beforehand and compared to other literature, for example: $\alpha$ = 4.87 g/g. Similarly, $Y_{P/S}$ = 0.4 g/g. My analysis used the same value for these prior calculated parameters and only focused on the 5 parameters mentioned in table 1.
+
+First, I decided to replicate the plot using the parameters provided in the paper. I was able to properly and accurately able to replicate using the plot shown in the paper. Figure 2 shows the concentration of Substrate, Cell and Product as the time change.
+
+########################### Figure 2 Here, Plot of All 3.
+
+However, for my analysis, I decided to focus on product production since the point of attention in this paper is the production of ethanol the product. Therefore, Figure 3 shows only the plot of product with experimental data from the parameters provided in the paper.
+
+########################### Figure 3 Here, Plot of only Product.
+
