@@ -222,9 +222,31 @@ Lastly, 10% change in the parameter values in both directions were plotted as sh
 ######################### Figure 11. 10% change.
 
 
+## Global Sensitivity Analysis
+
+After local sensitivity analysis, Global sensitivity analysis was conducted. Figure 12 shows the plot for 20% variation in the parameters which were considered in this analysis. Moreover, Figure 13 shows the uniform distribution for all the parameters that are in the analysis and were thus considerd in the global sensitivity. 
+
+############################ Figure 12. Global Sensitivity Plot
+
+########################### Figure 13. uniform distribution plot
+
+
+These two figures led me to perform least square regression to estimate the normalized parameters. This equation shows which parameter has the most and least effect on our system. Figure 14 shows the result of the least square regression through linear algebra and OLS Analysis. The result agrees with the local sensitivity analysis that $P_{max}$ and $n$ has the highest effect on the system since their value is the highest and $K_s$ and $K_i$ have the least effect since their value is so low. Moreover, the p-value of $K_s$ and $K_i$ is too high and thus they must be discarded.
+
+########################### Figure 14. OLS Analysis
+
+
+
+### Sensitivity Analysis Conclusion
+
 As it can be seen from the plots, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plot that $K_s$ is least sensitive since even changing it 10% did not affect the system at all. Therefore, it can be concluded that $K_s$ is not an important parameter and could be disregarded in some cases.
 
 
+
+## Conclusion
+
 Overall, the analysis looked at a set of coupled ordinary differential which were a kinetic model for production of ethanol in a biomass batch reactor with substrate and cell present. We first plotted the data using the parameters estimated by the paper. Then we minimized the parameters and fitted the experimental data, producing better parameters. Then we did a bifurcation analysis to determine how the steady state changes with change in a parameter. Lastly, we did sensitivity analysis to determine which parameter change affect the system the most. The result showed that the parameters $P_{max}$ and $n$ were the most sensitive parameter and must be studied more. On the other hand parameter $K_s$ had the least effect on the system and thus the system is not sensitive to change in $K_s$ parameter.
+
+Further analysis must be done on this system and the parameters minimzed using other tools to exclusively determine the best parameter fit to the data. Moreover, in this analysis, only a simple bifurcation analysis was conducted. In the future, more in-depth bifurcation analysis could be conducted on all the parameters to better understand how the system's steady state changes with changes in the parameter values.
 
 
