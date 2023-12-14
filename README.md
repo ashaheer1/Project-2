@@ -226,12 +226,29 @@ Lastly, 10% change in the parameter values in both directions were plotted as sh
 
 After local sensitivity analysis, Global sensitivity analysis was conducted. Figure 12 shows the plot for 20% variation in the parameters which were considered in this analysis. Moreover, Figure 13 shows the uniform distribution for all the parameters that are in the analysis and were thus considerd in the global sensitivity. 
 
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/797e3a0a-ebd5-4d4f-ad0f-602a0258d152" width="500">
+</div>
+
+**Figure 12. Global Sensitivity Plot for the parameters.**
+
 ############################ Figure 12. Global Sensitivity Plot
 
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f69087e2-5b9c-4842-8a62-0474c371f042" width="500">
+</div>
+
+**Figure 13. Uniform Distribution Plot in order to perform Global Sensitivity Analysis on the System.**
 ########################### Figure 13. uniform distribution plot
 
 
 These two figures led me to perform least square regression to estimate the normalized parameters. This equation shows which parameter has the most and least effect on our system. Figure 14 shows the result of the least square regression through linear algebra and OLS Analysis. The result agrees with the local sensitivity analysis that $P_{max}$ and $n$ has the highest effect on the system since their value is the highest and $K_s$ and $K_i$ have the least effect since their value is so low. Moreover, the p-value of $K_s$ and $K_i$ is too high and thus they must be discarded.
+
+<div align="center">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/faac8f93-a95b-4ad4-96a1-aa1c97e135dc" width="500">
+</div>
+
+**Figure 14. Linear Algebra and OLS Analysis result of Global Sensitivity Analysis.
 
 ########################### Figure 14. OLS Analysis
 
