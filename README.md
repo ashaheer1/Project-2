@@ -12,19 +12,17 @@ Oliveira, S. C., Oliveira, R. C., Tacin, M. V., & Gattás, E. A. L.
 (2016). Kinetic modeling and optimization of a batch ethanol fermentation process. 
 J. Bioprocess. Biotech, 6(266), 2. DOI: 10.4172/2155-9821.1000266
 
-Because of the high demand of  ethanol in fuel and other uses, there are various processes that are being studied. The aim of these studies is to determine the ideal and optimal conditions for the reactor to be in to produce the most ethanol. Therefore, this paper studies the production of ethanol by the use of a bioreactor containing bacteria cells and substrate. Essentially, in this paper, a mathematical model was used to determine and interpret experimental data from a batch alcohol fermentation process. Moreover in this paper substrate limitations and product inhibition were taken into account when determining the cell concentration and product concentration. Essentially, the substrate (S) is used by the cells (X) to produce the product (E). The paper proposes a kinetic model with a set of coupled ordinary differential equations. These ordinary differential equations have a whole set of parameters which affect the ODEs. Figure 1 shows the set of ordinary differential equations and the parameters that these equations depend on.
+To provide some background, because of the high demand of  ethanol in fuel and other uses, there are various processes that are being studied. The aim of these studies is to determine the ideal and optimal conditions for the reactor to produce ethanol. Therefore, this paper studies the production of ethanol by the use of a bioreactor containing bacteria cells and substrate. Essentially, in this paper, a mathematical model was used to determine and interpret experimental data from a batch alcohol fermentation process. Moreover in this paper substrate limitations and product inhibition were taken into account when determining the cell concentration and product concentration. Essentially, the substrate (S) is used by the cells (X) to produce the product (P). The paper proposes a kinetic model with a set of coupled ordinary differential equations. These ordinary differential equations have a whole set of parameters which affect these ODEs. Figure 1 shows the set of ordinary differential equations and the parameters that these equations depend on.
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f44ee7e2-efb7-4878-a066-02d381605db7" width="400">
 </div>
 
 **Figure 1. Set of Coupled Ordinary Differential Equations studied in the paper**
-########################### Figure 1 Here
 
 Again, in this S is the substrate concentration, X is the cell concentration, and P is the product ethanol concentration. $\hat{\mu}$ is considered the Maximum specific growth rate in the absence of inhibitory effects parameter, $K_S$ is the saturation constant, $K_i$ is the inhibition parameter of sugars, $P_{max}$ is the inhibition parameter for product ethanol, and $n$ is ethanol toxic power. These parameters significantly affect this system of coupled ordinary differential equations.
 
-**The paper had the following values for the parameters:**
-
+Moreover, **The paper had the following values for the parameters:**
 
 <table align="center" border="1">
   <tr>
@@ -60,28 +58,23 @@ Again, in this S is the substrate concentration, X is the cell concentration, an
 </table>
 
 
-
-
 Morover, some parameters were calculated beforehand and compared to other literature, for example: $\alpha$ = 4.87 g/g. Similarly, $Y_{P/S}$ = 0.4 g/g. My analysis used the same value for these prior calculated parameters and only focused on the 5 parameters mentioned in table 1.
 
-First, I decided to replicate the plot using the parameters provided in the paper. I was able to properly and accurately able to replicate using the plot shown in the paper. Figure 2 shows the concentration of Substrate, Cell and Product as the time change.
+First, I decided to replicate the plot using the parameters provided in the paper. I was able to properly and accurately able to replicate using the plot shown in the paper. Figure 2 shows the concentration of Substrate, Cell and Product as the time changes.
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3f1442e4-f48d-444d-a22f-7a34485a0df9" width="400">
 </div>
 
 **Figure 2. Plot of Substrate, Cell and Product Concentration. Added is the experimental Data**
-########################### Figure 2 Here, Plot of All 3.
 
-However, for my analysis, I decided to focus on product production since the point of attention in this paper is the production of ethanol the product. Therefore, Figure 3 shows only the plot of product with experimental data from the parameters provided in the paper.
+However, for my analysis, I decided to focus on product production since the point of attention in this paper is the production of ethanol. Therefore, Figure 3 shows only the plot of product from the parameters provided in the paper along with experimental data.
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7f7499ff-5660-40d6-b24f-bb2f7d859d3a" width="400">
 </div>
 
 **Figure 3. Plot of Product Concentration along with experimental Data**
-########################### Figure 3 Here, Plot of only Product.
-
 
 # Minimizing the Parameters to Find the Ideal Fit to the Data
 
@@ -94,9 +87,8 @@ After setting the bounds, I was able to determine to the minimized function whic
 </div>
 
 **Figure 4. The Optimized Fit with new Set of Parameters**
-########################## Figure 4 Here, Minimized Fit.
 
-As figure 4 shows, the fit is not the most perfect fit. However, it is much better than the fit the paper had, improving the parameters to a much higher degree. The reason for that might be that the paper only performed nonlinear regression on these values to determine the parameters. Therefore, using the numerical methods of odeint and the minimize function led to much better results.
+As figure 4 shows, the fit is not the most perfect fit. However, it is much better fit than the paper had, improving the parameters to a higher degree. The reason for that might be that the paper only performed nonlinear regression on these values to determine the parameters. Therefore, using the numerical methods of odeint and the minimize function led to much better results.
 
 **After minimizing, these were the following parameters:**
 
@@ -144,7 +136,6 @@ First, a Flow on a Line Analysis led me to the following Figure 5:
 </div>
 
 **Figure 5. Flow on a Line Analysis. Showing Steady State**
-######################### Figure 5 Here, Flow on a Line Analysis.
 
 Figure 5 shows that all the lines are nearing to a 0 around 98 which led me to believe there is a steady state for the product around 98. Therefore, I decided to do an fsolve analysis and it showed me that the equation is 0 around 98.56, thus confirming that the steady state is around 98.56. Figure 6 shows the result for the fsolve analysis:
 
@@ -153,9 +144,8 @@ Figure 5 shows that all the lines are nearing to a 0 around 98 which led me to b
 </div>
 
 **Figure 6. Fsolve Analysis showing the value of steady state at optimize parameters**
-######################### Figure 6 Here, Fsolve Analysis.
 
-After determining steady state, I decided to do a bifurcation analysis on the system. At first I want to see how the change in Ki would affect the system and how the steady state would change. It led to the following Figure 7 a) . It shows that the system changes steady state. However, the change occurs around -111. Which is out of physical bounds of Ki. I did a similar bifurcation analysis for Ks shown in Figure 7 b), and it led to a similar result around -208, which again is out of physical bounds for Ks. Thus the system does not change steady state as far as Ks and Ki are concerned. However, more complex Bifurcation analysis were done and are shown in the python file.
+After determining steady state, I decided to do a bifurcation analysis on the system. At first I want to see how the change in Ki would affect the system and how the steady state would change. It led to the following Figure 7 a) . It shows that the system changes steady state. However, the change occurs around -111, which is out of physical bounds of Ki. I did a similar bifurcation analysis for Ks shown in Figure 7 b), and it led to a similar result around -208, which again is out of physical bounds for Ks. Thus the system does not change steady state as far as Ks and Ki are concerned. However, more complex Bifurcation analysis were done and are shown in the python file.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/5736d2d7-c9b5-4334-85ae-6a84a341f8a9" width="500">
@@ -164,7 +154,11 @@ After determining steady state, I decided to do a bifurcation analysis on the sy
 
 **Figure 7 a) Bifurcation Analysis of Ki. b) Bifurcation Analysis of Ks.**
 
-######################### Figure 7 Here, a and b, The two bifurcation Analysis.
+Afterwards, more bifurcation analysis was done on the parameters $P_{max}$ and $n$ since these parameters affect the system the most. The bifurcation analysis result is shown in Figure 8 a) and b) for these two parameters. As it can be seen from the figures, the steady state does not change as these parameter changes. Therefore, for $P_{max}$ and $n$ parameters, there is only one steady state which does not change.
+
+
+
+################################## Figure 8. a) Bifurcation Analysis of Pmax and b) Bifurcation Analysis of n.
 
 ## Sensitivity Analysis on the System
 
@@ -173,16 +167,14 @@ Lastly, I performed a sensitivity analysis on the system by changing the paramet
 
 ### 1% Sensitivity.
 
-Figure 8 show how the system changes by 1% change in each parameter. As it can be seen, there is not much visibile difference and the the plot was zoomed in in the appropriate area. Figure 9 shows the zoomed in plot showing the sensitivity of each parameter at 1%.
+Figure 9 show how the system changes by 1% change in each parameter. As it can be seen, there is not much visibile difference and the plots were zoomed in the appropriate area. Figure 10 shows the zoomed in plot showing the sensitivity of each parameter at 1%.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/5d5c173c-6fe9-465f-a8e6-6bb480717328" width="500">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3db3f3df-04eb-4503-9dbe-091f933397dc" width="500">
 </div>
 
-**Figure 8. 1% Sensitivity Analysis on the Parameters in both directions**
-
-######################### Figure 8 Here, 1% change
+**Figure 9. 1% Sensitivity Analysis on the Parameters in both directions**
 
 
 <div style="display: flex; justify-content: space-between;">
@@ -190,80 +182,68 @@ Figure 8 show how the system changes by 1% change in each parameter. As it can b
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7a4ec444-48b9-492d-8308-ab1783020181" width="500">
 </div>
 
-**Figure 9. 1% Sensitivity Analysis zoom to show where the most deviation occurs**
+<div align="center">
 
-######################### Figure 9 Here, zoomed in 1% change.
+**Figure 10. 1% Sensitivity Analysis zoom to show where the most deviation occurs**
 
+</div>
 
 ### 5% Sensitivity
 
-Similarly, 5% change in the parameter values were plotted to see which one is the most sensitive. This is shown in Figure 10
+Similarly, 5% change in the parameter values were plotted to see which one is the most sensitive. This is shown in Figure 11
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/2a6271b8-4c08-4dc7-a761-f0cb02904d05" width="500">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/c6988e33-2646-455a-bc10-6abe40ecd826" width="500">
 </div>
 
-**Figure 10. 5% Sensitivity Analysis on the Parameters in both directions**
-
-######################### Figure 10 Here, 5% change
+**Figure 11. 5% Sensitivity Analysis on the Parameters in both directions**
 
 ### 10% Sensitivity
 
-Lastly, 10% change in the parameter values in both directions were plotted as shown in Figure 11.
+Lastly, 10% change in the parameter values in both directions were plotted as shown in Figure 12.
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/bebe398b-b579-474e-a087-ff77bd0ebc87" width="500">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f5b6ebd7-a0d0-4fd3-b88e-5fb4238656ff" width="500">
 </div>
 
-**Figure 11. 10% Selectivity Analysis on the Parameters. Percent changes in both direction**
-
-######################### Figure 11. 10% change.
-
+**Figure 12. 10% Selectivity Analysis on the Parameters. Percent changes in both direction**
 
 ## Global Sensitivity Analysis
 
-After local sensitivity analysis, Global sensitivity analysis was conducted. Figure 12 shows the plot for 20% variation in the parameters which were considered in this analysis. Moreover, Figure 13 shows the uniform distribution for all the parameters that are in the analysis and were thus considerd in the global sensitivity. 
+After local sensitivity analysis, Global sensitivity analysis was conducted. Figure 13 shows the plot for 20% variation in the parameters which were considered in this analysis. Moreover, Figure 14 shows the uniform distribution for all the parameters that are in the analysis and were thus considerd in the global sensitivity. 
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/797e3a0a-ebd5-4d4f-ad0f-602a0258d152" width="500">
 </div>
 
-**Figure 12. Global Sensitivity Plot for the parameters.**
-
-############################ Figure 12. Global Sensitivity Plot
+**Figure 13. Global Sensitivity Plot for the parameters.**
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f69087e2-5b9c-4842-8a62-0474c371f042" width="500">
 </div>
 
-**Figure 13. Uniform Distribution Plot in order to perform Global Sensitivity Analysis on the System.**
-########################### Figure 13. uniform distribution plot
+**Figure 14. Uniform Distribution Plot in order to perform Global Sensitivity Analysis on the System.**
 
-
-These two figures led me to perform least square regression to estimate the normalized parameters. This equation shows which parameter has the most and least effect on our system. Figure 14 shows the result of the least square regression through linear algebra and OLS Analysis. The result agrees with the local sensitivity analysis that $P_{max}$ and $n$ has the highest effect on the system since their value is the highest and $K_s$ and $K_i$ have the least effect since their value is so low. Moreover, the p-value of $K_s$ and $K_i$ is too high and thus they must be discarded.
+These two figures led me to perform least square regression to estimate the normalized parameters. This equation shows which parameter has the most and least effect on our system. Figure 15 shows the result of the least square regression through linear algebra and OLS Analysis. The result shows that $P_{max}$ and $n$ have the highest effect on the system since their value is the highest and $K_s$ and $K_i$ have the least effect since their value is so low. Moreover, the p-value of $K_s$ and $K_i$ is too high and thus they must be discarded.
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/faac8f93-a95b-4ad4-96a1-aa1c97e135dc" width="500">
 </div>
 
-**Figure 14. Linear Algebra and OLS Analysis result of Global Sensitivity Analysis.
-
-########################### Figure 14. OLS Analysis
-
-
+**Figure 15. Linear Algebra and OLS Analysis result of Global Sensitivity Analysis.
 
 ### Sensitivity Analysis Conclusion
 
-As it can be seen from the plots, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plot that $K_s$ is least sensitive since even changing it 10% did not affect the system at all. Therefore, it can be concluded that $K_s$ is not an important parameter and could be disregarded in some cases.
+As it can be seen from the plots of local and global sensitivity, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plots that $K_s$ and $K_i$ is least sensitive since even changing them 10% did not affect the system that much. Therefore, it can be concluded that $K_s$ and $K_i$ are not an important parameter and could be disregarded in some cases.
 
 
 
 ## Conclusion
 
-Overall, the analysis looked at a set of coupled ordinary differential which were a kinetic model for production of ethanol in a biomass batch reactor with substrate and cell present. We first plotted the data using the parameters estimated by the paper. Then we minimized the parameters and fitted the experimental data, producing better parameters. Then we did a bifurcation analysis to determine how the steady state changes with change in a parameter. Lastly, we did sensitivity analysis to determine which parameter change affect the system the most. The result showed that the parameters $P_{max}$ and $n$ were the most sensitive parameter and must be studied more. On the other hand parameter $K_s$ had the least effect on the system and thus the system is not sensitive to change in $K_s$ parameter.
+Overall, the analysis looked at a set of coupled ordinary differential which were a kinetic model for production of ethanol in a biomass batch reactor with substrate and cell present. We first plotted the data using the parameters estimated by the paper. Then we minimized the parameters and fitted the experimental data, producing better parameters and fit. Then we did a bifurcation analysis to determine how the steady state changes with changes in a parameter. Lastly, we did sensitivity analysis to determine which parameter change affects the system the most. The result showed that the parameters $P_{max}$ and $n$ were the most sensitive parameter and must be studied more. On the other hand parameter $K_s$ and $K_i$ had the least effect on the system and thus the system is not sensitive to change in $K_s$ and $K_i$ parameter.
 
 Further analysis must be done on this system and the parameters minimzed using other tools to exclusively determine the best parameter fit to the data. Moreover, in this analysis, only a simple bifurcation analysis was conducted. In the future, more in-depth bifurcation analysis could be conducted on all the parameters to better understand how the system's steady state changes with changes in the parameter values.
 
-
+The implications of this would be that the best model fit would led to increase in production of ethanol which is the purpose of this papaer. This would lead to to higher production and would thus meet the demand of multiple industries where ethanol is extensively used.
