@@ -18,7 +18,10 @@ To provide some background, because of the high demand of  ethanol in fuel and o
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f44ee7e2-efb7-4878-a066-02d381605db7" width="400">
 </div>
 
+<div align="center">
+  
 **Figure 1. Set of Coupled Ordinary Differential Equations studied in the paper**
+</div>
 
 Again, in this S is the substrate concentration, X is the cell concentration, and P is the product ethanol concentration. $\hat{\mu}$ is considered the Maximum specific growth rate in the absence of inhibitory effects parameter, $K_S$ is the saturation constant, $K_i$ is the inhibition parameter of sugars, $P_{max}$ is the inhibition parameter for product ethanol, and $n$ is ethanol toxic power. These parameters significantly affect this system of coupled ordinary differential equations.
 
@@ -66,7 +69,10 @@ First, I decided to replicate the plot using the parameters provided in the pape
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3f1442e4-f48d-444d-a22f-7a34485a0df9" width="400">
 </div>
 
+<div align="center">
+  
 **Figure 2. Plot of Substrate, Cell and Product Concentration. Added is the experimental Data**
+</div>
 
 However, for my analysis, I decided to focus on product production since the point of attention in this paper is the production of ethanol. Therefore, Figure 3 shows only the plot of product from the parameters provided in the paper along with experimental data.
 
@@ -74,7 +80,10 @@ However, for my analysis, I decided to focus on product production since the poi
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7f7499ff-5660-40d6-b24f-bb2f7d859d3a" width="400">
 </div>
 
+<div align="center">
+  
 **Figure 3. Plot of Product Concentration along with experimental Data**
+</div>
 
 # Minimizing the Parameters to Find the Ideal Fit to the Data
 
@@ -86,7 +95,10 @@ After setting the bounds, I was able to determine to the minimized function whic
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/ed39d7b7-7506-4876-8f68-82a3b556e8fd" width="400">
 </div>
 
+<div align="center">
+  
 **Figure 4. The Optimized Fit with new Set of Parameters**
+</div>
 
 As figure 4 shows, the fit is not the most perfect fit. However, it is much better fit than the paper had, improving the parameters to a higher degree. The reason for that might be that the paper only performed nonlinear regression on these values to determine the parameters. Therefore, using the numerical methods of odeint and the minimize function led to much better results.
 
@@ -135,7 +147,10 @@ First, a Flow on a Line Analysis led me to the following Figure 5:
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/9dd7b5db-6fd7-47c2-aee9-c197db83fe2d" width="400">
 </div>
 
+<div align="center">
+  
 **Figure 5. Flow on a Line Analysis. Showing Steady State**
+</div>
 
 Figure 5 shows that all the lines are nearing to a 0 around 98 which led me to believe there is a steady state for the product around 98. Therefore, I decided to do an fsolve analysis and it showed me that the equation is 0 around 98.56, thus confirming that the steady state is around 98.56. Figure 6 shows the result for the fsolve analysis:
 
@@ -143,7 +158,10 @@ Figure 5 shows that all the lines are nearing to a 0 around 98 which led me to b
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f75310d4-00e0-447a-a38e-da4e8a494667" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 6. Fsolve Analysis showing the value of steady state at optimize parameters**
+</div>
 
 After determining steady state, I decided to do a bifurcation analysis on the system. At first I want to see how the change in Ki would affect the system and how the steady state would change. It led to the following Figure 7 a) . It shows that the system changes steady state. However, the change occurs around -111, which is out of physical bounds of Ki. I did a similar bifurcation analysis for Ks shown in Figure 7 b), and it led to a similar result around -208, which again is out of physical bounds for Ks. Thus the system does not change steady state as far as Ks and Ki are concerned. However, more complex Bifurcation analysis were done and are shown in the python file.
 
@@ -152,13 +170,23 @@ After determining steady state, I decided to do a bifurcation analysis on the sy
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/57836bb1-b743-4e11-9de5-3b79aa21cb76" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 7 a) Bifurcation Analysis of Ki. b) Bifurcation Analysis of Ks.**
+</div>
 
 Afterwards, more bifurcation analysis was done on the parameters $P_{max}$ and $n$ since these parameters affect the system the most. The bifurcation analysis result is shown in Figure 8 a) and b) for these two parameters. As it can be seen from the figures, the steady state does not change as these parameter changes. Therefore, for $P_{max}$ and $n$ parameters, there is only one steady state which does not change.
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/54ddc7d9-169c-4581-98ef-5cde41d367e5" width="500">
+  <img src="https://github.com/ashaheer1/Project-2/assets/147550852/9d7debdc-048b-4959-957c-754324467845" width="500">
+</div>
 
 
-################################## Figure 8. a) Bifurcation Analysis of Pmax and b) Bifurcation Analysis of n.
+<div align="center">
+  
+**Figure 8. a) Bifurcation Analysis of Pmax and b) Bifurcation Analysis of n**
+</div>
 
 ## Sensitivity Analysis on the System
 
@@ -174,8 +202,10 @@ Figure 9 show how the system changes by 1% change in each parameter. As it can b
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/3db3f3df-04eb-4503-9dbe-091f933397dc" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 9. 1% Sensitivity Analysis on the Parameters in both directions**
-
+</div>
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/7926d266-d63d-4c6b-9462-24329b08a04e" width="500">
@@ -197,7 +227,10 @@ Similarly, 5% change in the parameter values were plotted to see which one is th
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/c6988e33-2646-455a-bc10-6abe40ecd826" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 11. 5% Sensitivity Analysis on the Parameters in both directions**
+</div>
 
 ### 10% Sensitivity
 
@@ -208,7 +241,10 @@ Lastly, 10% change in the parameter values in both directions were plotted as sh
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f5b6ebd7-a0d0-4fd3-b88e-5fb4238656ff" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 12. 10% Selectivity Analysis on the Parameters. Percent changes in both direction**
+</div>
 
 ## Global Sensitivity Analysis
 
@@ -218,13 +254,19 @@ After local sensitivity analysis, Global sensitivity analysis was conducted. Fig
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/797e3a0a-ebd5-4d4f-ad0f-602a0258d152" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 13. Global Sensitivity Plot for the parameters.**
+</div>
 
 <div align="center">
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/f69087e2-5b9c-4842-8a62-0474c371f042" width="500">
 </div>
 
+<div align="center">
+  
 **Figure 14. Uniform Distribution Plot in order to perform Global Sensitivity Analysis on the System.**
+</div>
 
 These two figures led me to perform least square regression to estimate the normalized parameters. This equation shows which parameter has the most and least effect on our system. Figure 15 shows the result of the least square regression through linear algebra and OLS Analysis. The result shows that $P_{max}$ and $n$ have the highest effect on the system since their value is the highest and $K_s$ and $K_i$ have the least effect since their value is so low. Moreover, the p-value of $K_s$ and $K_i$ is too high and thus they must be discarded.
 
@@ -232,13 +274,15 @@ These two figures led me to perform least square regression to estimate the norm
   <img src="https://github.com/ashaheer1/Project-2/assets/147550852/faac8f93-a95b-4ad4-96a1-aa1c97e135dc" width="500">
 </div>
 
-**Figure 15. Linear Algebra and OLS Analysis result of Global Sensitivity Analysis.
+<div align="center">
+  
+**Figure 15. Linear Algebra and OLS Analysis result of Global Sensitivity Analysis.**
+  
+</div>
 
 ### Sensitivity Analysis Conclusion
 
 As it can be seen from the plots of local and global sensitivity, Parameter $P_{max}$ and $n$ have the highest sensitivity to the system of differential equations. Therefore, these parameters must be studied more. Moreover, it is also evident from the plots that $K_s$ and $K_i$ is least sensitive since even changing them 10% did not affect the system that much. Therefore, it can be concluded that $K_s$ and $K_i$ are not an important parameter and could be disregarded in some cases.
-
-
 
 ## Conclusion
 
